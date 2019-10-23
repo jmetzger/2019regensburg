@@ -6,9 +6,9 @@ https://mothergeo-py.readthedocs.io/en/latest/development/how-to/gdal-ubuntu-pkg
 
 #### Schritt 1: Installation auf Ubuntu 18.04. LTS ####
 ```
-apt install python3.6-dev
+apt install -y python3.6-dev
 add-apt-repository ppa:ubuntugis/ppa && sudo apt-get update
-apt install gdal-bin
+apt install -y gdal-bin
 
 ogrinfo --version
 ```
