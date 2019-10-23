@@ -32,3 +32,8 @@ unzip antarctica-latest-free.shp.zip
 echo "create schema shapetest" | mysql -uroot -pirgendeinpassword 
 ogr2ogr -f MySQL MySQL:shapetest,host=localhost,user=root,password=irgendeinpassword gis_osm_transport_free_1.shp -nln shapefiles -update -overwrite -lco engine=INNODB
 ```
+
+#### Schritt 4: Shapefile auslesen ####
+```
+ogrinfo MySQL:shapetest,user=root shapefiles -so
+```
