@@ -1,6 +1,10 @@
 # MariaDB - Training - Stadt Regensburg 
 
-## Gewusst wie :  
+## Gewusst wie :
+
+### ogr2ogr cheatsheet ###
+https://www.bostongis.com/PrinterFriendly.aspx?content_name=ogr_cheatsheet
+
 ### ogr2ogr installieren 
 https://mothergeo-py.readthedocs.io/en/latest/development/how-to/gdal-ubuntu-pkg.html
 
