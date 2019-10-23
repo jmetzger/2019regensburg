@@ -1,7 +1,7 @@
 # MariaDB - Training - Stadt Regensburg 
 
 ## Gewusst wie :  
-### ocr2ocr installieren 
+### ogr2ogr installieren 
 https://mothergeo-py.readthedocs.io/en/latest/development/how-to/gdal-ubuntu-pkg.html
 
 #### Schritt 1: Installation auf Ubuntu 18.04. LTS ####
