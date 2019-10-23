@@ -1,4 +1,4 @@
-# Stadt Regensburg 
+# MariaDB - Training - Stadt Regensburg 
 
 ## Gewusst wie :  
 ### ocr2ocr installieren 
@@ -24,4 +24,11 @@ mv antarctica-latest-free.shp.zip antarctica
 apt install unzip 
 cd antarctica
 unzip antarctica-latest-free.shp.zip
+```
+
+#### Schritt 3: Datenbank anlegen und Shapes importieren ####
+
+```
+echo "shapetest" | mysql -uroot -pirgendeinpassword 
+ogr2ogr -f MySQL MySQL:shapetest,host=localhost,user=root,password=irgendeinpassword gis_osm_transport_free_1.shp -nln shapefiles -update -overwrite -lco engine=INNODB
 ```
