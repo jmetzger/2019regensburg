@@ -1,6 +1,47 @@
 # MariaDB - Training - Stadt Regensburg 
 
-## Gewusst wie :
+## Gewusst wie: Apache / php / mysql
+```
+apt install apache2
+apt install libapache2-mod-php
+apt install php7.2-mysql
+```
+### Beispielcode index.php ###
+
+```
+<?php
+$link = mysqli_connect("127.0.0.1", "sakila", "__streng_geheimes_passwort_das_nicht_Verratenwird", "sakila");
+
+if (!$link) {
+    echo "Fehler: konnte nicht mit MySQL verbinden." . PHP_EOL;
+    echo "Debug-Fehlernummer: " . mysqli_connect_errno() . PHP_EOL;
+    echo "Debug-Fehlermeldung: " . mysqli_connect_error() . PHP_EOL;
+    exit;
+}
+
+echo "Erfolg: es wurde ordnungsgemäß mit MySQL verbunden! Die Datenbank \"datenbank\" ist toll." . PHP_EOL;
+echo "Host-Informationen: " . mysqli_get_host_info($link) . PHP_EOL;
+
+if ($result = mysqli_query($link, "select * from actor")) {
+    printf("Select returned %d rows.\n", mysqli_num_rows($result));
+
+    while ($row=mysqli_fetch_assoc($result)){
+
+       print "<pre>";
+       print_r ($row);
+       print "</pre>";
+
+    }
+}
+
+mysqli_close($link);
+?>
+
+```
+
+
+
+## Gewusst wie shapes importieren:
 
 ### ogr2ogr cheatsheet ###
 https://www.bostongis.com/PrinterFriendly.aspx?content_name=ogr_cheatsheet
